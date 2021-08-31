@@ -83,7 +83,7 @@ let updateRightMotorBar = (key,value) => {
     ui.rightMotorBar.container.style.boxShadow = (ui.rightMotorBar.barValue + "px 0px 0px #1e282f inset");
 };
 NetworkTables.addKeyListener('/SmartDashboard/right-motor', updateRightMotorBar);
-
+    
 let updateLeftMotorBar = (key,value) => {
     ui.leftMotorBar.val = value;
     ui.leftMotorBar.visualVal = (Math.round(ui.leftMotorBar.val * 100));
