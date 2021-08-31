@@ -17,15 +17,15 @@ let ui = {
         number: document.getElementById("tY-value"),
     },
     tSDisplay:{
-        container: document.getElementById("x-accel-box"),
+        container: document.getElementById("tS-box"),
         val: 0,
         visualVal: 0,
-        number: document.getElementById("x-accel-value"),
+        number: document.getElementById("tS-value"),
     },
     tVDisplay:{
-        container: document.getElementById("y-accel-box"),
+        container: document.getElementById("tV-box"),
         val: false,
-        number: document.getElementById("y-accel-value"),
+        number: document.getElementById("tV-value"),
     },
     rightMotorBar:{
         container: document.getElementById("right-motor-bar"),
@@ -44,9 +44,7 @@ let ui = {
     autoSelect: document.getElementById('auto-select'),
 };
 
-// Key Listeners
-
-//Encoder Values
+//Limelight Readouts
 let update_tX = (key,value) => {
     ui.tXDisplay.val = value;
     ui.tXDisplay.visualVal = ((Math.floor((ui.tXDisplay.val - ui.tXDisplay.offset) * 100))/100);
@@ -61,7 +59,6 @@ let update_tY = (key,value) => {
 };
 NetworkTables.addKeyListener('/limelight/ty', update_tY);
 
-//Accelerometer Values
 let update_tS = (key,value) => {
     ui.tSDisplay.val = value;
     ui.tSDisplay.visualVal = (Math.floor(ui.tSDisplay.val * 100)/100);
