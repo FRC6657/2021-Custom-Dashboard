@@ -21,7 +21,7 @@ body {
 
 .connect-button:hover {
 
-    background-color: linear-gradient(0deg, rgba(0, 255, 216, 1) 0%, rgba(231, 0, 255, 1) 100%);
+    background-color: linear-gradient(0deg, rgba(103, 191, 13, 1) 0%, rgba(203, 219, 46, 1) 100%);
     color: white;
 
 }
@@ -212,14 +212,14 @@ body.login #login {
 .left-encoder-value,
 .right-encoder-value {
 
-    color: rgba(231, 0, 255, 1);
+    color: rgba(203, 219, 46, 1);
 
 }
 
 .x-accel-value,
 .y-accel-value {
 
-    color: rgba(0, 255, 216, 1);
+    color: rgba(103, 191, 13, 1);
 
 }
 
@@ -235,7 +235,7 @@ body.login #login {
     padding: 0.4rem 1rem;
     color: white;
     border: solid 3px transparent;
-    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(45deg, rgba(0, 255, 216, 1) 0%, rgba(231, 0, 255, 1) 100%);
+    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(45deg, rgba(103, 191, 13, 1) 0%, rgba(203, 219, 46, 1) 100%);
     background-origin: border-box;
     background-clip: content-box, border-box;
     transition-duration: 0.2s;
@@ -283,7 +283,7 @@ body.login #login {
     width: 250px;
     height: 50px;
     border: solid 3px transparent;
-    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(45deg, rgba(0, 255, 216, 1) 0%, rgba(231, 0, 255, 1) 100%);
+    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(45deg, rgba(103, 191, 13, 1) 0%, rgba(203, 219, 46, 1) 100%);
     background-origin: border-box;
     background-clip: content-box, border-box;
     box-shadow: -300px 0px 0px #1e282f inset, 0 7px #2c3b45;
@@ -345,7 +345,7 @@ body.login #login {
     border: 3px inset transparent;
  
     background: transparent;
-    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(45deg, rgba(0, 255, 216, 1) 0%, rgba(231, 0, 255, 1) 100%);
+    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(45deg, rgba(103, 191, 13, 1) 0%, rgba(203, 219, 46, 1) 100%);
     background-origin: border-box;
     background-clip: content-box, border-box;
  
