@@ -16,7 +16,7 @@ body {
     user-select: none;
     color: white;
     overflow: hidden;
-    background: #2B3A42;
+    background: #101213;
 }
 
 .connect-button:hover {
@@ -53,16 +53,16 @@ body>* {
     padding: 10px;
     position: fixed;
     overflow: scroll;
-    background: #1e282f;
+    background: #101213;
 }
 
 .connect-panel {
     position: relative;
-    background: #1e282f;
+    background: #191C1B;
     width: 461px;
     height: 117px;
     left: 10px;
-    top: 209px;
+    top: 10px;
     color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 2rem;
@@ -70,12 +70,12 @@ body>* {
 }
 
 .sensor-panel {
-    position: relative;
-    background: #1e282f;
-    width: 463px;
+    position: absolute;
+    background: #101213;
+    width: 461px;
     height: 259px;
-    left: 481px;
-    top: 218px;
+    left: 10px;
+    top: 264px;
     color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 1.25rem;
@@ -84,22 +84,22 @@ body>* {
 
 .motor-value-panel {
     position: absolute;
-    background: #1e282f;
-    width: 463px;
-    height: 143px;
-    left: 481px;
-    bottom: 10px;
+    background: #191C1B;
+    width: 461px;
+    height: 110px;
+    left: 10px;
+    top: 538px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 1.25rem;
 }
 
 .auto-selector-panel {
-    position: relative;
-    background: #1e282f;
-    width: 463px;
+    position: absolute;
+    background: #191C1B;
+    width: 461px;
     height: 117px;
-    left: 481px;
-    top: -167px;
+    left: 10px;
+    top: 137px;
   }
 
 
@@ -170,7 +170,7 @@ body.login #login {
 .x-accel,
 .y-accel {
     position: absolute;
-    background: #28353e;
+    background: #191C1B;
     width: 224px;
     height: 121px;
 }
@@ -251,12 +251,12 @@ body.login #login {
 
 #right-motor-bar {
     top: 12px;
-    box-shadow: -143px 0px 0px #1e282f inset;
+    box-shadow: -143px 0px 0px #101213 inset;
 }
 
 #left-motor-bar {
     top: 19px;
-    box-shadow: -143px 0px 0px #1e282f inset;
+    box-shadow: -143px 0px 0px #101213 inset;
 }
 
 .motor-bar-label {
@@ -286,7 +286,7 @@ body.login #login {
     background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(45deg, rgba(103, 191, 13, 1) 0%, rgba(203, 219, 46, 1) 100%);
     background-origin: border-box;
     background-clip: content-box, border-box;
-    box-shadow: -300px 0px 0px #1e282f inset, 0 7px #2c3b45;
+    box-shadow: -300px 0px 0px #101213 inset, 0 7px #101213;
     left: 106px;
     top: 47px;
     color: white;
@@ -299,13 +299,13 @@ body.login #login {
 
 #connect-button:hover {
 
-    box-shadow: -300px 0px 0px #1b242a inset, 0px 7px #2c3b45;
+    box-shadow: -300px 0px 0px #101213 inset, 0px 7px #101213;
   
 }
   
 #connect-button:active {
   
-    box-shadow: -300px 0px 0px #1b242a inset, 0px 5px #2c3b45;
+    box-shadow: -300px 0px 0px #101213 inset, 0px 5px #101213;
     transform: translateY(4px);
   
   
@@ -349,7 +349,7 @@ body.login #login {
     background-origin: border-box;
     background-clip: content-box, border-box;
  
-    box-shadow: 250px 0px 0px #1e292f inset;
+    box-shadow: 250px 0px 0px #101213 inset;
  
     outline: 0;
     -webkit-appearance: none;
