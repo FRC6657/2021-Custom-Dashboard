@@ -13,68 +13,6 @@
         <div id="robot-state">Unknown State</div>
         <input type="button" id="connect-button" value="Connect">
     </article>
-    <article id="gyro-panel" class="gyro-panel">
-        <svg id="gyro" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-5 0 290 250">
-            <defs>
-                <style>
-                    .cls-1{
-                        fill:none;
-                        stroke:#fff;
-                        stroke-width:4px;
-                    }
-                    .cls-2,
-                    .cls-4{
-                        isolation:isolate;
-                        fill:#fff;
-                        font-family:Verdana-Bold, Verdana;font-weight:700;
-                    }.cls-2{
-                        font-size:12px;
-                    }
-                    .cls-4{
-                        font-size:7px;
-                        text-align: center;
-                    }
-                </style>
-                <linearGradient id="solids" x1="0%" y1="0%" x2="0%" y2="100%">
-                    <stop offset="20%" style="stop-color:rgb(231,0,255);stop-opacity:1" />
-                    <stop offset="100%" style="stop-color:rgb(0,255,216);stop-opacity:1" />
-                </linearGradient>
-                </defs>
-                <line class="cls-1" x1="26.59" y1="113" x2="224.59" y2="113"/>
-                <path class="cls-1" d="M242.38,116.73" transform="translate(-24.41 -42)"/>
-                <path class="cls-1" d="M57.62,193.27" transform="translate(-24.41 -42)"/>
-                <path class="cls-1" d="M220.71,84.29" transform="translate(-24.41 -42)"/>
-                <path class="cls-1" d="M79.29,225.71" transform="translate(-24.41 -42)"/>
-                <line class="cls-1" x1="125.59" y1="212" x2="125.59" y2="14"/>
-                <path class="cls-1" d="M246.92,192.26" transform="translate(-24.41 -42)"/>
-                <path class="cls-1" d="M62.15,115.72" transform="translate(-24.41 -42)"/>
-                <path class="cls-1" d="M220.71,225.71" transform="translate(-24.41 -42)"/>
-                <path class="cls-1" d="M79.29,84.29" transform="translate(-24.41 -42)"/>
-                <path class="cls-1" d="M188.26,247.38" transform="translate(-24.41 -42)"/>
-                <path class="cls-1" d="M111.74,62.62" transform="translate(-24.41 -42)"/>
-                <path class="cls-1" d="M111.74,247.38" transform="translate(-24.41 -42)"/>
-                <path class="cls-1" d="M188.26,62.62" transform="translate(-24.41 -42)"/>
-                <path d="M-272.27-361.88" transform="translate(-24.41 -42)"/>
-                <text class="cls-2" transform="translate(121.33 11.18)">0</text>
-                <text class="cls-2" transform="translate(197.59 39.18)">45</text>
-                <text class="cls-2" transform="translate(226.59 117.18)">90</text>
-                <text class="cls-2" transform="translate(197.59 197.18)">135</text>
-                <text class="cls-2" transform="translate(112.8 224.18)">180</text>
-                <text class="cls-2" transform="translate(28 197.18)">225</text>
-                <text class="cls-2" transform="translate(-3 117.18)">270</text>
-                <text class="cls-2" transform="translate(28 39.18)">315</text>
-                <line class="cls-1" x1="34.13" y1="150.89" x2="217.06" y2="75.12"/>
-                <line class="cls-1" x1="55.59" y1="183" x2="195.6" y2="43"/>
-                <line class="cls-1" x1="87.71" y1="204.47" x2="163.48" y2="21.54"/>
-                <line class="cls-1" x1="163.48" y1="204.47" x2="87.71" y2="21.54"/>
-                <line class="cls-1" x1="217.06" y1="150.89" x2="34.13" y2="75.12"/>
-                <line class="cls-1" x1="195.6" y1="183" x2="55.59" y2="43"/>
-                <circle fill="#1e282f" cx="125.59" cy="113" r="87.5"/>
-                <polygon id="gyro-arm" fill="url(#solids)" class="cls-3" points="125.59 199.5 112.59 113 125.59 26.5 138.59 113 125.59 199.5"/>
-                <circle fill="#1e282f" cx="125.59" cy="113" r="11.5"/>
-                <text id="gyro-number" text-anchor="middle" dominant-baseline="middle" class="cls-4" transform="translate(126.14 114.63)">0°</text>
-        </svg>
-    </article>
     <article class="sensor-panel">
         <article id="left-encoder-box" class="left-encoder">
           <span class="left-encoder-value-label">Left Encoder:<br /></span>
@@ -102,13 +40,6 @@
         </div>
         <span id="right-bar-label" class="motor-bar-label">Right Motor:</span>
         <span id="left-bar-label" class="motor-bar-label">Left Motor:</span>
-
-        <div class="speed-slider">
-          <input id="speed-slider-bar" type="range" value="50" min="0" max="100" step="5" oninput="updateSpeedSlider()">
-          <div id="speed-slider-number">100%</div>
-          <div id="speed-slider-label">Speed Multi:</div>
-        </div>
-
     </article>
     <article class="auto-selector-panel">
       <div id="auto-select-label">Auto Mode</div>

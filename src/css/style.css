@@ -56,13 +56,6 @@ body>* {
     background: #1e282f;
 }
 
-.gyro-panel {
-    left: 10px;
-    bottom: 10px;
-    height: 412px;
-    width: 461px;
-}
-
 .connect-panel {
     position: relative;
     background: #1e282f;
@@ -327,56 +320,6 @@ body.login #login {
     top: 4px;
 
 }
-
-
-#speed-slider-bar {
-    -webkit-appearance: none;
-    position: relative;
-    height: 29px;
-    width: 287px;
-    cursor: pointer;
-    transition-duration: 0.1s;
-    border-radius: 10px;
-    border: 3px inset transparent;
-    background: transparent;
-    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(45deg, rgba(0, 255, 216, 1) 0%, rgba(231, 0, 255, 1) 100%);
-    background-origin: border-box;
-    background-clip: content-box, border-box;
-    outline: 0;
-    box-shadow: 0px 0px 0px #1e282f inset;
-    left: 127px;
-    top: 2px;
-  }
-  
-  ::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    width: 0px;
-    height: 0px;
-  }
-  
-  #speed-slider-number {
-    text-align: center;
-    position: relative;
-    top: -29px;
-    left: 49px;
-    pointer-events: none;
-  }
-  
-  #speed-slider-label {
-    position: relative;
-    left: -3px;
-    top: -55px;
-    pointer-events: none;
-  }
-  
-  .speed-slider {
-    position: relative;
-    top: 24px;
-    left: 15px;
-  }
-
-
- 
   #auto-select {
  
     position: absolute;
