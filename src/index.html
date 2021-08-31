@@ -14,21 +14,21 @@
         <input type="button" id="connect-button" value="Connect">
     </article>
     <article class="sensor-panel">
-        <article id="left-encoder-box" class="left-encoder">
-          <span class="left-encoder-value-label">Left Encoder:<br /></span>
-          <span id="left-encoder-value" class="left-encoder-value">0in.</span>
+        <article id="tX-box" class="tX">
+          <span class="tX-value-label">tX<br /></span>
+          <span id="tX-value" class="tX-value">0°</span>
         </article>
-        <article id="right-encoder-box" class="right-encoder">
-          <span class="right-encoder-value-label">Right Encoder:<br /></span>
-          <span id="right-encoder-value" class="right-encoder-value">0in.</span>
+        <article id="tY-box" class="tY">
+          <span class="tY-value-label">tY<br /></span>
+          <span id="tY-value" class="tY-value">0°</span>
         </article>
-      <article id="x-accel-box" class="x-accel">
-        <span class="x-accel-value-label">X Accel:<br /></span>
-        <span id="x-accel-value" class="x-accel-value">0g</span>
+      <article id="tS-box" class="tS">
+        <span class="tS-value-label">tS<br /></span>
+        <span id="tS-value" class="tS-value">0°</span>
       </article>
-      <article id="y-accel-box" class="y-accel">
-        <span class="y-accel-value-label">Y Accel:<br /></span>
-        <span id="y-accel-value" class="y-accel-value">0g</span>
+      <article id="tV-box" class="tV">
+        <span class="tV-value-label">tV<br /></span>
+        <span id="tV-value" class="tV-value">Unknown</span>
       </article>
     </article>
     <article class="motor-value-panel">
@@ -47,6 +47,11 @@
         <option>No Auto Modes Found</option>
         <!-- This gets populated by JS -->
       </select>
+    </article>
+    <article class="limelight-panel">
+      <div id="video-feed">
+        
+      </div>
     </article>
 
     <div id="login">

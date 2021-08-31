@@ -100,7 +100,18 @@ body>* {
     height: 117px;
     left: 10px;
     top: 137px;
-  }
+}
+
+.limelight-panel{
+
+    position: absolute;
+    background: #191C1B;
+    width: 660px;
+    height: 500px;
+    left: 481px;
+    top: 10px;
+
+}
 
 
 svg * {
@@ -108,19 +119,6 @@ svg * {
     -ms-transform-origin: center;
     transform-origin: center;
     overflow: visible;
-}
-
-#gyro {
-    width: 461px;
-    height: 500px;
-    margin-left: 0px;
-    margin-top: -35px;
-}
-
-#gyro-arm {
-    -webkit-transform-origin: bottom;
-    -ms-transform-origin: bottom;
-    transform-origin: 43.3% 45.25%;
 }
 
 aside {
@@ -165,59 +163,59 @@ body.login #login {
 
 
 
-.left-encoder,
-.right-encoder,
-.x-accel,
-.y-accel {
+.tX,
+.tY,
+.tS,
+.tV {
     position: absolute;
     background: #191C1B;
     width: 224px;
     height: 121px;
 }
 
-.left-encoder {
-    left: 5px;
-    top: 5px;
+.tX {
+    left: 0px;
+    top: 0px;
 }
 
-.right-encoder {
-    right: 5px;
-    top: 5px;
+.tY {
+    right: 0px;
+    top: 0px;
 }
 
-.x-accel {
-    left: 5px;
-    bottom: 5px;
+.tS {
+    left: 0px;
+    bottom: 0px;
 }
 
-.y-accel {
-    right: 5px;
-    bottom: 5px;
+.tV {
+    right: 0px;
+    bottom: 0px;
 }
 
-.left-encoder-value-label,
-.left-encoder-value,
-.right-encoder-value-label,
-.right-encoder-value,
-.x-accel-value-label,
-.x-accel-value,
-.y-accel-value-label,
-.y-accel-value {
+.tX-value-label,
+.tX-value,
+.tY-value-label,
+.tY-value,
+.tS-value-label,
+.tS-value,
+.tV-value-label,
+.tV-value {
 
     position: relative;
     top: 37px;
 
 }
 
-.left-encoder-value,
-.right-encoder-value {
+.tX-value,
+.tY-value {
 
     color: rgba(203, 219, 46, 1);
 
 }
 
-.x-accel-value,
-.y-accel-value {
+.tS-value,
+.tV-value {
 
     color: rgba(103, 191, 13, 1);
 
@@ -320,7 +318,7 @@ body.login #login {
     top: 4px;
 
 }
-  #auto-select {
+#auto-select {
  
     position: absolute;
     width: 250px;
@@ -355,9 +353,9 @@ body.login #login {
     -webkit-appearance: none;
    
  
-  }
+}
 
-  #auto-select-label {
+#auto-select-label {
 
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 2rem;
@@ -366,6 +364,15 @@ body.login #login {
     width: 100%;
     left: 0px;
     top: 4px;
+}
+
+#video-feed{
+
+    position: relative;
+    top:10;
+    left:10;
+    width: 640px;
+    height: 480px;
+    background-image: url('http://limelight.local:5801');
 
 }
- 

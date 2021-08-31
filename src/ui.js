@@ -1,38 +1,30 @@
 // Define UI elements
 let ui = {
     robotState: document.getElementById('robot-state'),
-    gyro: {
-        container: document.getElementById('gyro-panel'),
-        val: 0,
-        offset: 0,
-        visualVal: 0,
-        arm: document.getElementById('gyro-arm'),
-        number: document.getElementById('gyro-number')
-    },
-    leftEncoderDisplay:{
-        container: document.getElementById("left-encoder-box"),
+
+    tYDisplay:{
+        container: document.getElementById("tX-box"),
         val: 0,
         visualVal: 0,
         offset: 0,
-        number: document.getElementById("left-encoder-value"),
+        number: document.getElementById("tX-value"),
     },
-    rightEncoderDisplay:{
-        container: document.getElementById("right-encoder-box"),
+    tXDisplay:{
+        container: document.getElementById("tY-box"),
         val: 0,
         visualVal: 0,
         offset: 0,
-        number: document.getElementById("right-encoder-value"),
+        number: document.getElementById("tY-value"),
     },
-    xAccelDisplay:{
+    tSDisplay:{
         container: document.getElementById("x-accel-box"),
         val: 0,
         visualVal: 0,
         number: document.getElementById("x-accel-value"),
     },
-    yAccelDisplay:{
+    tVDisplay:{
         container: document.getElementById("y-accel-box"),
-        val: 0,
-        visualVal: 0,
+        val: false,
         number: document.getElementById("y-accel-value"),
     },
     rightMotorBar:{
@@ -49,59 +41,38 @@ let ui = {
         number: document.getElementById("left-motor-number"),
         barValue: 0,
     },
-    speedMultiBar:{
-        container: document.getElementById("speed-slider-bar"),
-        val:0,
-        visualVal: 0,
-        number: document.getElementById("speed-slider-number"),
-
-    },
     autoSelect: document.getElementById('auto-select'),
 };
 
 // Key Listeners
 
-// Gyro rotation
-let updateGyro = (key, value) => {
-    ui.gyro.val = value;
-    ui.gyro.visualVal = Math.floor(ui.gyro.val - ui.gyro.offset);
-    ui.gyro.visualVal %= 360;
-    if (ui.gyro.visualVal < 0) {
-        ui.gyro.visualVal += 360;
-    }
-    ui.gyro.arm.style.transform = `rotate(${ui.gyro.visualVal}deg)`;
-    ui.gyro.number.textContent = ui.gyro.visualVal + '°';
-};
-NetworkTables.addKeyListener('/SmartDashboard/gyro-angle', updateGyro);
-
 //Encoder Values
-let updateLeftEncoder = (key,value) => {
-    ui.leftEncoderDisplay.val = value;
-    ui.leftEncoderDisplay.visualVal = ((Math.floor((ui.leftEncoderDisplay.val - ui.leftEncoderDisplay.offset) * 100))/100);
-    ui.leftEncoderDisplay.number.innerHTML = ui.leftEncoderDisplay.visualVal + "in.";
+let update_tX = (key,value) => {
+    ui.tXDisplay.val = value;
+    ui.tXDisplay.visualVal = ((Math.floor((ui.tXDisplay.val - ui.tXDisplay.offset) * 100))/100);
+    ui.tXDisplay.number.innerHTML = ui.tXDisplay.visualVal + "°";
 };
-NetworkTables.addKeyListener('/SmartDashboard/left-encoder', updateLeftEncoder);
-let updateRightEncoder = (key,value) => {
-    ui.rightEncoderDisplay.val = value;
-    ui.rightEncoderDisplay.visualVal = ((Math.floor((ui.rightEncoderDisplay.val - ui.rightEncoderDisplay.offset) * 100))/100);
-    ui.rightEncoderDisplay.number.innerHTML = ui.rightEncoderDisplay.visualVal + "in.";
+NetworkTables.addKeyListener('/limelight/tx', update_tX);
+
+let update_tY = (key,value) => {
+    ui.tYDisplay.val = value;
+    ui.tYDisplay.visualVal = ((Math.floor((ui.tYDisplay.val - ui.tYDisplay.offset) * 100))/100);
+    ui.tYDisplay.number.innerHTML = ui.tYDisplay.visualVal + "°";
 };
-NetworkTables.addKeyListener('/SmartDashboard/right-encoder', updateRightEncoder);
+NetworkTables.addKeyListener('/limelight/ty', update_tY);
 
 //Accelerometer Values
-let updateXAccel = (key,value) => {
-    ui.xAccelDisplay.val = value;
-    ui.xAccelDisplay.visualVal = (Math.floor(ui.xAccelDisplay.val * 100)/100);
-    ui.xAccelDisplay.number.innerHTML = ui.xAccelDisplay.visualVal + "g";
+let update_tS = (key,value) => {
+    ui.tSDisplay.val = value;
+    ui.tSDisplay.visualVal = (Math.floor(ui.tSDisplay.val * 100)/100);
+    ui.tSDisplay.number.innerHTML = ui.tSDisplay.visualVal + "°";
 };
-NetworkTables.addKeyListener('/SmartDashboard/x-accel', updateXAccel);
+NetworkTables.addKeyListener('/limelight/tS', update_tS);
 
-let updateYAccel = (key,value) => {
-    ui.yAccelDisplay.val = value;
-    ui.yAccelDisplay.visualVal = (Math.floor(ui.yAccelDisplay.val * 100)/100);
-    ui.yAccelDisplay.number.innerHTML = ui.yAccelDisplay.visualVal + "g";
+let update_tV = (key,value) => {
+    ui.yAccelDisplay.number.innerHTML = ui.yAccelDisplay.value;
 };
-NetworkTables.addKeyListener('/SmartDashboard/y-accel', updateYAccel);
+NetworkTables.addKeyListener('/limelight/tV', update_tV);
 
 //Motor Values
 let updateRightMotorBar = (key,value) => {
@@ -123,35 +94,6 @@ let updateLeftMotorBar = (key,value) => {
     
 };
 NetworkTables.addKeyListener('/SmartDashboard/left-motor', updateLeftMotorBar);
-
-ui.speedMultiBar.container.oninput = function() {
-    var originalValue = document.getElementById("speed-slider-bar").value;
-    var percentValue = Math.round(originalValue);
-    originalValue = percentValue;
-    var nV = -(((originalValue * -282) / 100) + 282);
-    document.getElementById("speed-slider-bar").style.boxShadow = (nV + "px 0px 0px #1e282f inset");
-    document.getElementById("speed-slider-number").innerHTML = originalValue + "%";
-
-    NetworkTables.putValue('/SmartDashboard/speed-multiplier', originalValue)
-}
-
-
-// Reset gyro value to 0 on click
-ui.gyro.container.onclick = function() {
-    ui.gyro.offset = ui.gyro.val;
-    updateGyro('/SmartDashboard/gyro-angle', ui.gyro.val);
-};
-// Reset Left Encoder to 0 on click
-ui.leftEncoderDisplay.container.onclick = function(){
-    ui.leftEncoderDisplay.offset = ui.leftEncoderDisplay.val;
-    updateLeftEncoder('/SmartDashboard/left-encoder', ui.leftEncoderDisplay.val);
-};
-// Reset Left Encoder to 0 on click
-ui.rightEncoderDisplay.container.onclick = function(){
-    ui.rightEncoderDisplay.offset = ui.rightEncoderDisplay.val;
-    updateRightEncoder('/SmartDashboard/right-encoder', ui.rightEncoderDisplay.val);
-};
-
 
 NetworkTables.addKeyListener('/SmartDashboard/auto-chooser/options', (key, value) => {
     // Clear previous list
