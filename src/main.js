@@ -96,7 +96,7 @@ function createWindow() {
     // Create the browser window.
     mainWindow = new BrowserWindow({
         width: 1166,
-        height: 718,
+        height: 706 ,
         show: false,
         icon: __dirname + '/../images/icon.png',
         webPreferences: {
@@ -104,7 +104,7 @@ function createWindow() {
         }
     });
     // Move window to top (left) of screen.
-    mainWindow.setPosition(0, 230);
+    mainWindow.setPosition(50, 50);
     // Load window.
     mainWindow.loadURL(`file://${__dirname}/index.html`);
     // Once the python server is ready, load window contents.

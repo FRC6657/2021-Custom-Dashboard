@@ -52,7 +52,7 @@ function setLogin() {
   connect.textContent = 'Connect';
   // Add the default address and select xxxx
   //address.value = 'roborio-xxxx-frc.local';
-  address.value = 'roborio.6657-frc.local';
+  address.value = '10.66.57.2';
   address.focus();
   //address.setSelectionRange(8, 12);
 }

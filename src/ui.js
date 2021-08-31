@@ -67,7 +67,12 @@ let update_tS = (key,value) => {
 NetworkTables.addKeyListener('/limelight/tS', update_tS);
 
 let update_tV = (key,value) => {
-    ui.yAccelDisplay.number.innerHTML = ui.yAccelDisplay.value;
+    if(ui.tVDisplay.value == "1"){
+        ui.yAccelDisplay.number.innerHTML = "Target Aquired";
+    }
+    else{
+        ui.yAccelDisplay.number.innerHTML = "No Target";
+    }
 };
 NetworkTables.addKeyListener('/limelight/tV', update_tV);
 
