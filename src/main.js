@@ -96,7 +96,7 @@ function createWindow() {
     // Create the browser window.
     mainWindow = new BrowserWindow({
         width: 1166,
-        height: 706 ,
+        height: 710 ,
         show: false,
         icon: __dirname + '/../images/icon.png',
         webPreferences: {

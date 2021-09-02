@@ -24,7 +24,7 @@ let ui = {
     },
     tVDisplay:{
         container: document.getElementById("tV-box"),
-        val: false,
+        val: 0,
         number: document.getElementById("tV-value"),
     },
     rightMotorBar:{
@@ -40,6 +40,11 @@ let ui = {
         visualVal: 0,
         number: document.getElementById("left-motor-number"),
         barValue: 0,
+    },
+    shooterState:{
+        container: document.getElementById("shooter-panel"),
+        val: "Off",
+        number: document.getElementById("shooter-value")
     },
     autoSelect: document.getElementById('auto-select'),
 };
@@ -66,12 +71,18 @@ let update_tS = (key,value) => {
 };
 NetworkTables.addKeyListener('/limelight/tS', update_tS);
 
+let update_shooter = (key,value) => {
+    ui.shooterState.val = value;
+    ui.shooterState.number.innerHTML = ui.shooterState.val;
+};
+NetworkTables.addKeyListener('/SmartDashboard/shooter-value', update_shooter);
+
 let update_tV = (key,value) => {
     if(ui.tVDisplay.value == "1"){
-        ui.yAccelDisplay.number.innerHTML = "Target Aquired";
+        ui.tVDisplay.number.innerHTML = "Target Aquired";
     }
     else{
-        ui.yAccelDisplay.number.innerHTML = "No Target";
+        ui.tVDisplay.number.innerHTML = "No Target";
     }
 };
 NetworkTables.addKeyListener('/limelight/tV', update_tV);
@@ -112,6 +123,8 @@ NetworkTables.addKeyListener('/SmartDashboard/auto-chooser/options', (key, value
     // Set value to the already-selected mode. If there is none, nothing will happen.
     ui.autoSelect.value = NetworkTables.getValue('/SmartDashboard/auto-chooser/selected');
 });
+
+
 
 NetworkTables.addKeyListener('/SmartDashboard/auto-chooser/selected', (key, value) => {
     ui.autoSelect.value = value;

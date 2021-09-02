@@ -103,16 +103,24 @@ body>* {
 }
 
 .limelight-panel{
-
     position: absolute;
     background: #191C1B;
     width: 660px;
     height: 500px;
     left: 481px;
     top: 10px;
-
 }
 
+.shooter-panel{
+    position:absolute;
+    background: #191C1B;
+    top: 538px;
+    left: 481px;
+    width:461px;
+    height: 110px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.25rem;
+}
 
 svg * {
     -webkit-transform-origin: center;
@@ -205,6 +213,16 @@ body.login #login {
     position: relative;
     top: 37px;
 
+}
+
+.shooter-value-label {
+    position: relative;
+    top:0px;
+}
+#shooter-value{
+    position: absolute;
+    color:rgba(203, 219, 46, 1);
+    left:35%;
 }
 
 .tX-value,
