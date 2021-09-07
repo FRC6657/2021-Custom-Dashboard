@@ -46,6 +46,12 @@ let ui = {
         val: "Off",
         number: document.getElementById("shooter-value")
     },
+    speedMultiBar:{
+        container: document.getElementById("speed-slider-bar"),
+        val:0,
+        visualVal: 0,
+        number: document.getElementById("speed-slider-number"),
+    },
     autoSelect: document.getElementById('auto-select'),
 };
 
@@ -124,7 +130,16 @@ NetworkTables.addKeyListener('/SmartDashboard/auto-chooser/options', (key, value
     ui.autoSelect.value = NetworkTables.getValue('/SmartDashboard/auto-chooser/selected');
 });
 
+ui.speedMultiBar.container.oninput = function() {
+    var originalValue = document.getElementById("speed-slider-bar").value;
+    var percentValue = Math.round(originalValue);
+    originalValue = percentValue;
+    var nV = -(((originalValue * -282) / 100) + 282);
+    document.getElementById("speed-slider-bar").style.boxShadow = (nV + "px 0px 0px #1e282f inset");
+    document.getElementById("speed-slider-number").innerHTML = originalValue + "%";
 
+    NetworkTables.putValue('/SmartDashboard/speed-multiplier', originalValue)
+}
 
 NetworkTables.addKeyListener('/SmartDashboard/auto-chooser/selected', (key, value) => {
     ui.autoSelect.value = value;
