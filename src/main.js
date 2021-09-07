@@ -95,16 +95,16 @@ function createWindow() {
     });
     // Create the browser window.
     mainWindow = new BrowserWindow({
-        width: 1166,
-        height: 739 ,
+        width: 1920,
+        height: 641 ,
         show: false,
         icon: __dirname + '/../images/icon.png',
         webPreferences: {
             nodeIntegration: true
         }
     });
-    // Move window to top (left) of screen.
-    mainWindow.setPosition(50, 50);
+    // Move window to start pos
+    mainWindow.setPosition(0, 192);
     // Load window.
     mainWindow.loadURL(`file://${__dirname}/index.html`);
     // Once the python server is ready, load window contents.
