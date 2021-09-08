@@ -1,6 +1,21 @@
 // Define UI elements
 let ui = {
     robotState: document.getElementById('robot-state'),
+
+    tXDisplay:{
+        container: document.getElementById("targeting-panel"),
+        val: 0,
+        visualVal: 0,
+        number: document.getElementById("tY-value"),
+    },
+    
+    tYDisplay:{
+        container: document.getElementById("targeting-panel"),
+        val: 0,
+        visualVal: 0,
+        number: document.getElementById("tX-value"),
+    },
+
 };
 
 //This is probably horribly inefficient but ask me if I care
@@ -71,6 +86,21 @@ function setPipeline(pipeline){
     }
     NetworkTables.putValue('/limelight/pipeline', pipeline)
 }
+
+//Limelight Readouts
+let update_tX = (key,value) => {
+    ui.tXDisplay.val = value;
+    ui.tXDisplay.visualVal = ((Math.floor((ui.tXDisplay.val - ui.tXDisplay.offset) * 100))/100);
+    ui.tXDisplay.number.innerHTML = ui.tXDisplay.visualVal + "°";
+};
+NetworkTables.addKeyListener('/limelight/tx', update_tX);
+
+let update_tY = (key,value) => {
+    ui.tYDisplay.val = value;
+    ui.tYDisplay.visualVal = ((Math.floor((ui.tYDisplay.val - ui.tYDisplay.offset) * 100))/100);
+    ui.tYDisplay.number.innerHTML = ui.tYDisplay.visualVal + "°";
+};
+NetworkTables.addKeyListener('/limelight/ty', update_tY);
 
 addEventListener('error',(ev)=>{
     ipc.send('windowError',{mesg:ev.message,file:ev.filename,lineNumber:ev.lineno})

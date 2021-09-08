@@ -67,6 +67,15 @@ body {
     background-color: #50940A;
 }
 
+#tX-value,#tY-value{
+    position: relative;
+    font-family: 'Montserrat';
+    font-size: 40px;
+    color: rgba(103, 191, 13, 1);
+    left: 50px;
+}
+
+
 select {
     border: none;
     background: none;
