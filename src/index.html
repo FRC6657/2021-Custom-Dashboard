@@ -13,57 +13,7 @@
         <div id="robot-state">Unknown State</div>
         <input type="button" id="connect-button" value="Connect">
     </article>
-    <article class="sensor-panel">
-        <article id="tX-box" class="tX">
-          <span class="tX-value-label">tX<br /></span>
-          <span id="tX-value" class="tX-value">0°</span>
-        </article>
-        <article id="tY-box" class="tY">
-          <span class="tY-value-label">tY<br /></span>
-          <span id="tY-value" class="tY-value">0°</span>
-        </article>
-      <article id="tS-box" class="tS">
-        <span class="tS-value-label">tS<br /></span>
-        <span id="tS-value" class="tS-value">0°</span>
-      </article>
-      <article id="tV-box" class="tV">
-        <span class="tV-value-label">tV<br /></span>
-        <span id="tV-value" class="tV-value">Unknown</span>
-      </article>
-    </article>
-    <article class="motor-value-panel">
-        <div id="right-motor-bar" class="motor-value-bar">
-          <div id="right-motor-number" class="motor-value-label">0%</div>
-        </div>
-        <div id="left-motor-bar" class="motor-value-bar">
-          <div id="left-motor-number" class="motor-value-label">0%</div>
-        </div>
-        <span id="right-bar-label" class="motor-bar-label">Right Motor:</span>
-        <span id="left-bar-label" class="motor-bar-label">Left Motor:</span>
-        <div class="speed-slider">
-          <input id="speed-slider-bar" type="range" value="50" min="0" max="100" step="5" oninput="updateSpeedSlider()">
-          <div id="speed-slider-number">100%</div>
-          <div id="speed-slider-label">Speed Multi:</div>
-        </div>
-    </article>
-    <article class="auto-selector-panel">
-      <div id="auto-select-label">Auto Mode</div>
-      <select id="auto-select">
-        <option>No Auto Modes Found</option>
-        <!-- This gets populated by JS -->
-      </select>
-    </article>
-    <article class="limelight-panel">
-      <div id="video-feed"></div>
-    </article>
-
-    <article class="shooter-panel">
-      <div id="shooter-value">Off</div>
-      <span id="shooter-value-label" class="shooter-value-label"> Shooter State:</span>
-    </article>
-
-
-
+    
     <div id="login">
         <input id="connect-address" type="text" value="localhost" disabled>
         <button id="connect" class="connect-button" disabled>Connecting</button>
