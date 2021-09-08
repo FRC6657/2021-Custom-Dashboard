@@ -3,6 +3,7 @@ let ui = {
     robotState: document.getElementById('robot-state'),
 };
 
+//This is probably horribly inefficient but ask me if I care
 function setPipeline(pipeline){
 
     document.getElementById("pipe0").style.color.white;
