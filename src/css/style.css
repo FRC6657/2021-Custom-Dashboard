@@ -68,11 +68,32 @@ body {
 }
 
 #tX-value,#tY-value{
-    position: relative;
+    position: absolute;
     font-family: 'Montserrat';
     font-size: 40px;
     color: rgba(103, 191, 13, 1);
-    left: 50px;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    left:0px;
+    top:7px;
+    width: 100%;
+}
+
+#tY-value{
+    left:85px;
+}
+#tX-value{
+    left:-100px;
+}
+
+.targeting-panel{
+    position: absolute;
+    width: 330px;
+    height: 60px;
+    left:1210px;
+    top:600px;
+    background-color: transparent;
 }
 
 
