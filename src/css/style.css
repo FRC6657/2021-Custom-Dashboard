@@ -33,6 +33,40 @@ body {
     display: inline-block;
 }
 
+.pipeline-panel{
+
+    position: absolute;
+    width: 315px;
+    height: 140px;
+    left: 1573px;
+    top: 647px;
+    background-color: transparent;
+
+}
+
+#pipe0,#pipe1,#pipe2,#pipe3,#pipe4,
+#pipe5,#pipe6,#pipe7,#pipe8,#pipe9{
+    position: relative;
+    width:55px;
+    height: 55px;
+    border: 0;
+    outline: none;
+    border-radius: 10px;
+    background-color: #101213;
+    color: white;
+    top: -10px;
+    border: 3px solid rgba(103, 191, 13, 1);
+    font-family: 'Montserrat';
+    font-size: 22px;
+}
+
+#pipe5,#pipe6,#pipe7,#pipe8,#pipe9{top:-5px}
+
+#pipe0{
+    color:white;
+    background-color: #50940A;
+}
+
 select {
     border: none;
     background: none;
