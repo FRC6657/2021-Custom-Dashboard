@@ -5,13 +5,12 @@ Credit for most of the backend, and the general idea goes to https://github.com/
 ## Setup
 You'll need [`nodejs`](https://nodejs.org) & [`npm`](https://npmjs.com).
 
+Run npm install before running 
+
 Before running the dashboard, you'll need to install the node dependencies by `cd`ing into the dashboard directory and running `npm install`.
 
 ### Configuration
 * In `ui.js`, there are a bunch of key handler functions which controls the updating of control elements in the dashboard. Example NetworkTables key names are used, but you'll need to change them to match those used in your team's robot code for them to affect anything on your robot.
-
-#### Camera feed
-FRC Dashboard supports display of MJPG camera streams. Once you've created a stream (using WPILib's `CameraServer` class, [mjpg-streamer](https://robotpy.github.io/2016/01/14/mjpg-streamer-for-roborio/) (deprecated), or another method), update `style.css` to use the IP of your live camera feed. Usually this is something like `roborio-XXXX-frc.local:1181/?action=stream`, where `XXXX` is your team's number. The port increases based on camera number, for example, `1181` is Camera 1, and `1182` is Camera 2. **Note:** not every robot follows this rule. Your port may be `5800` or something else.
 
 ## Running
 Connect to your robot's network if you haven't already. (If you're just testing the dashboard and don't currently need to use it with your robot, you can skip this step.)
