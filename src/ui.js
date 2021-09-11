@@ -87,6 +87,17 @@ function setPipeline(pipeline){
     NetworkTables.putValue('/limelight/pipeline', pipeline)
 }
 
+function lightState(){
+
+    if(document.querySelector('.light-switch').checked){
+        NetworkTables.putValue('/limelight/ledMode', 3)
+    }
+    else{
+        NetworkTables.putValue('/limelight/ledMode', 1)
+    }
+
+}
+
 //Limelight Readouts
 let update_tX = (key,value) => {
     ui.tXDisplay.val = value;

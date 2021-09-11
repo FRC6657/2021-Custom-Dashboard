@@ -13,7 +13,14 @@
       <span id="tX-value" class="tX-value">26.2°</span>
       <span id="tY-value" class="tY-value">-22.0°</span>
   </article>
-  
+
+  <article class="limelight-toggles">
+    <input type="checkbox" id="_checkbox" onclick="lightState()" class ="light-switch">
+    <label for="_checkbox">
+      <div id="tick_mark"></div>
+    </label>
+  </article>
+
   <article class="pipeline-panel">
     <button id="pipe0" onclick="setPipeline('0')">0</button>
     <button id="pipe1" onclick="setPipeline('1')">1</button>
@@ -26,7 +33,6 @@
     <button id="pipe8" onclick="setPipeline('8')">8</button>
     <button id="pipe9" onclick="setPipeline('9')">9</button>
   </article>
-
   <div id="login">
       <input id="connect-address" type="text" value="localhost" disabled>
       <button id="connect" class="connect-button" disabled>Connecting</button>
