@@ -81,10 +81,10 @@ body {
 }
 
 #tY-value{
-    left:82px;
+    left:83px;
 }
 #tX-value{
-    left:-98px;
+    left:-100px;
 }
 
 .targeting-panel{
@@ -454,4 +454,24 @@ body.login #login {
 {
     transform: translate(0);
     opacity: 1;
+}
+
+.limelight-panel{
+    position: absolute;
+    background: transparent;
+    width: 720px;
+    height: 545px;
+    left: 1181px;
+    top: 10px;
+    border-radius: 20px;
+}
+
+#video-feed{
+    position: relative;
+    width: 710px;
+    height: 530px;
+    background-image: url('http://10.66.57.11:5800'); /* Limelight Feed */
+    /*background-image: url(https://i.imgur.com/de3YXtf.png); /* Resolution Test Image */
+    background-size: 710px, 530px;
+    border-radius: 20px;
 }
