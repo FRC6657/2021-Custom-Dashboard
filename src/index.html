@@ -10,15 +10,22 @@
 <body>
 
   <article class="targeting-panel">
-      <span id="tX-value" class="tX-value">26.2°</span>
-      <span id="tY-value" class="tY-value">-22.0°</span>
+      <span id="tX-value" class="tX-value">0°</span>
+      <span id="tY-value" class="tY-value">0°</span>
   </article>
 
   <article class="limelight-toggles">
-    <input type="checkbox" id="_checkbox" onclick="lightState()" class ="light-switch">
-    <label for="_checkbox">
-      <div id="tick_mark"></div>
+
+    <input type="checkbox" id="light-checkbox" onclick="lightState()" class ="light-switch">
+    <label for="light-checkbox" id="light-label">
+      <div id="light-tick-mark"></div>
     </label>
+
+    <input type="checkbox" id="vision-checkbox" onclick="visionState()" class ="vision-switch">
+    <label for="vision-checkbox" id="vision-label">
+      <div id="vision-tick-mark"></div>
+    </label>
+
   </article>
 
   <article class="pipeline-panel">
